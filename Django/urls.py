@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from pattern import sayHi
+from pattern import sayHi, saytime, cpu
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^say/$', sayHi)
+    url(r'^sayHi/$', sayHi),
+    url(r'^saytime/$', saytime),
+    url(r'^cpu/$', cpu)
 ]
