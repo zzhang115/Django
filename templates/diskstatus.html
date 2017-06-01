@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>show disk usage</p>
+{#it not works use for loop#}
+{% for line in disk_usage  %}
+    {% if "/dev/sda1" in line %}
+        <p style="color:red">{{ line }}</p>
+    {% else %}
+        <p> {{ line }}</p>
+    {% endif %}
+{% endfor %}
+
+{#<pre>{{ disk_usage }}</pre>#}
+
+</body>
+</html>

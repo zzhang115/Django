@@ -16,10 +16,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from views import sayHi, saytime, cpu, hours_ahead
+from newviews import disk
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^sayHi/$', sayHi),
     url(r'^saytime/$', saytime),
     url(r'^cpu/$', cpu),
-    url(r'^hours/plus/\d+/$', hours_ahead)
+    url(r'^hours/plus/\d+/$', hours_ahead),
+    url(r'^disk/$', disk)
 ]
