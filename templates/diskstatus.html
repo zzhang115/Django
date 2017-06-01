@@ -15,6 +15,19 @@
     {% endif %}
 {% endfor %}
 
+{% for name, infos in names.items %}
+    {{ name }}{{ infos }}<br/>
+    {% for info in infos %}
+        <ul>
+        {% ifequal '23' info %}
+            <li>{{name }}{{ info }}</li>
+        {% else %}
+            <li>{{ info }}</li>
+        {% endifequal %}
+        </ul>
+    {% endfor %}
+{#    <li>{{ name }}{{ infos }}</li>#}
+{% endfor %}
 {#<pre>{{ disk_usage }}</pre>#}
 
 </body>

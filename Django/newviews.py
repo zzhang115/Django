@@ -4,4 +4,8 @@ import os, datetime
 def disk(request):
     # d_usage = os.popen('df -h').read()#.split('\n')
     d_usage = os.popen('df -h').read().split('\n')
-    return render_to_response("diskstatus.html", {"disk_usage" : d_usage})
+    name_list = {
+        'zzc' : ['23', 'male', 'student'],
+        'oldboy' : [28, 'male', 'engineer']
+    }
+    return render_to_response("diskstatus.html", {"disk_usage" : d_usage, "names" : name_list})
